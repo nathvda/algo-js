@@ -3,7 +3,7 @@ let sum = 0;
 
 let i = 0;
 while (i < n){
-   let newNumber = parseInt(prompt("Enter a new number " + `${i+1}` ));
+   let newNumber = parseInt(prompt("Enter a new number " + `${i+1}`));
    sum += newNumber;
    i++;
 }
