@@ -9,4 +9,4 @@ function rand10(){
     return randomNumber;
 }
 
-console.log(rand10());
+    console.log(rand10());
