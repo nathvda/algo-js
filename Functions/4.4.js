@@ -38,7 +38,7 @@ function multiRand(amount){
     let i = 0;
 
     while (i < amount) {
-        let numberRandom = randNumber(becodeTrainees.length, 1);
+        let numberRandom = randNumber(becodeTrainees.length-1, 1);
         arrayNumbers.push(numberRandom);
         i++;
     }
@@ -59,4 +59,4 @@ function pickLearner(inputAr, n){
 }
 
 
-console.log(pickLearner(becodeTrainees, randNumber(becodeTrainees.length, 0)));
+console.log(pickLearner(becodeTrainees, randNumber((becodeTrainees.length), 0)));
