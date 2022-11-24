@@ -14,13 +14,18 @@ persontv.castmember = addtvcast(p);
             while (i < p){
                     const castmember = {};
                     castmember.firstname = prompt(`name of castmember ${i+1}`);
+                 
+                    console.log(castmember.firstname);
                     b.push(castmember);
+              
+                   
                     i++;
                 }
+
             return b;
             };
-
-            return persontv;
+                    
+                    return persontv;
 }
 
 function randNumber(a,b){
@@ -28,8 +33,6 @@ function randNumber(a,b){
     let randomNumber = (Math.floor(Math.random() * (a - b + 1) + b));
     return randomNumber;
 }
-
-const myserie = askTvSeries();
 
 function randomizeCast(tvSerie){
     
@@ -40,17 +43,23 @@ function randomizeCast(tvSerie){
     while (i < tvSerie.castmember.length){
    
         n = randNumber(tvSerie.castmember.length-1,0);
+        console.log(n);
 
         if (newCast.includes(tvSerie.castmember[n].firstname)){
-           continue;
+            continue;
         } else {
             newCast.push(tvSerie.castmember[n].firstname);
         }
 
         i++;
     }
-    
+    console.log(tvSerie);
+    console.log(newCast);
+
     return newCast;
+
 }
+
+const myserie = askTvSeries();
 
 alert(randomizeCast(myserie));
