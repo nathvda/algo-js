@@ -3,28 +3,28 @@ let numberChosen = prompt("Please, choose a number between 1 and 7");
 switch (numberChosen){
 
    case "1":
-    alert("Monday");
+    console.log("Monday");
     break;
     case "2": 
-    alert("Tuesday");
+    console.log("Tuesday");
     break;
     case "3": 
-    alert("Wednesday");
+    console.log("Wednesday");
     break;
     case "4": 
-    alert("Thursday");
+    console.log("Thursday");
     break;
     case "5": 
-    alert("Friday");
+    console.log("Friday");
     break;
     case "6": 
-    alert("Saturday");
+    console.log("Saturday");
     break;
     case "7": 
-    alert("Sunday");
+    console.log("Sunday");
     break;
     default : 
-    alert("This isn't between 1 and 7");
+    console.log("This isn't between 1 and 7");
 
 
 }

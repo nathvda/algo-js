@@ -8,6 +8,6 @@ while (i < n){
    i++;
 }
 
-alert(sum);
+console.log(sum);
 
 
