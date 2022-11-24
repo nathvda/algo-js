@@ -11,4 +11,5 @@ This repository was started on November 24th 2022 during my training bootcamp.
 
 Known Issues : 
 For 5.2.js, the loop sometimes never ends when presented with duplicates. 
+For 6.3.js, another loop problem to fix.
 
