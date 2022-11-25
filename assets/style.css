@@ -27,6 +27,7 @@ button{
     border-radius:1em;
     backdrop-filter:blur(5px);
     -webkit-backdrop-filter:blur(5px);
+    position:relative;
 }
 
 button:hover{
@@ -37,6 +38,20 @@ button:active{
     background-image:linear-gradient(0deg,rgba(231, 248, 81, 0.76), transparent);
 }
 
-form{background-color:rgba(255, 255, 255, 0.226);
+form{ background-color:rgba(255, 255, 255, 0.5);
 padding:2em;
-border-radius:2px;}
+border-radius:1em;
+position:absolute;
+z-index:99;
+backdrop-filter:blur(4px);
+-webkit-backdrop-filter:blur(4px);
+color:#303030;
+font-family:arial;
+font-size:0.8em;
+margin-top:2em;
+
+}
+
+.hidden{
+    display:none;
+}
