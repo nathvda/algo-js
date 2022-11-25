@@ -14,7 +14,7 @@ let chosenPlanet = prompt("choose a planet");
         "Mars": "1.8808158",
         "Jupiter": "11.862615"
     }
-    
+
         switch (chosenPlanet){
 
             case "Mercury": 
@@ -44,6 +44,6 @@ let chosenPlanet = prompt("choose a planet");
 
             default:
             alert(`You didn't chose a planet... Are you from Pluton ?`);
-
+            
         }
 }
