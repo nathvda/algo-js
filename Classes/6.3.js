@@ -11,16 +11,10 @@ while(i < 1000){
 for(let displ of rectangles){
 
    i = 0;
+   
    while(i < rectangles.length){
 
-       if (displ == rectangles[i]){
-           /* console.log("Ignored because same rectange");*/
-            continue;
-        }
-        else{    
             console.log(displ.collides(rectangles[i]));
-        }
-
    i++;
    }
 }
