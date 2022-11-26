@@ -39,7 +39,7 @@ function computeChange(price, moneyHanded){
 
                 return changeGiven;
 
-             } else {
+            } else {
 
                     let amount = Number(changeDue / bankNotes[i]).toFixed(0); 
                     console.log(amount);
@@ -67,10 +67,9 @@ function computeChange(price, moneyHanded){
                             changeDue -= amount * bankNotes[i];
                         }     
                    
-             }
+            }
         console.log(changeDue);         
         i++;
-        
         }
       
         return;
