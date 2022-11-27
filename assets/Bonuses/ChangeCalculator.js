@@ -19,7 +19,7 @@ function computeChange(price, moneyHanded){
         console.log(changeDue);
 
         let i = 0;
-        
+
         while(changeDue > 0){
 
                 let next;
@@ -45,34 +45,55 @@ function computeChange(price, moneyHanded){
                     console.log(amount);
                     console.log(changeGiven);
 
-                    if( (amount * bankNotes[i]) > changeDue ){ 
-                            changeDue -= (amount-1) * bankNotes[i];
-                            console.log(`Not enough for change, let's try ${next}.`);
-                            changeGiven.push(amount-1);
+                    if (amount == 0) {
+                        console.log(`Looks like I can't give you any ${bankNotes[i]} ${current} for that`);
+                        changeGiven.push(amount);
 
-                        }   else   if ((amount * bankNotes[i]) == changeDue ) {
+                    } else if( (amount * bankNotes[i]) > changeDue ){ 
+                        changeDue -= (amount-1) * bankNotes[i];
+                        console.log(`Not enough for change, let's try ${next}.`);
+                        changeGiven.push(amount-1);
+                    }  else if ((amount * bankNotes[i]) == changeDue ) {
                             console.log(`... ${bankNotes[i]} ${current} for that`);
                             changeDue -= amount * bankNotes[i];
                             changeGiven.push(amount);
-    
-                           } 
-                        
-                        else if (amount == 0) {
-                            console.log(`Looks like I can't give you any ${bankNotes[i]} ${current} for that`);
-                            changeGiven.push(amount);
-
-                        } else {
+                           } else {
                             console.log(`Here's your change, how much more do I owe you ? I'll go to ${next}`);
                             changeGiven.push(amount);
                             changeDue -= amount * bankNotes[i];
                         }     
                    
-            }
-        console.log(changeDue);         
+            }      
         i++;
         }
-      
-        return;
+        console.log(changeDue);   
+        console.log(changeGiven);
+
+        let sellerTalk = "For this, I'll give you ";
+
+        let x = 0;
+        while (x < changeGiven.length){
+            if (changeGiven[x] == 0){
+                continue;
+            } else {
+                sellerTalk += ` ${changeGiven[x]} ${bankNotes[x]}`;
+            }
+
+            if (x < 7){
+                sellerTalk += `bills,`; 
+            } else if (x > 7) {
+            sellerTalk += `coins,`; 
+          } else if (x = changeGiven.length) {
+            sellerTalk += ` goodbye !`;
+          
+    
+        }
+        
+        return sellerTalk;
     }
 
+    }
+    alert(sellerTalk);
 }
+
+

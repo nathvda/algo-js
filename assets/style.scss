@@ -43,6 +43,8 @@ button:active{
     background-image:linear-gradient(180deg,$fifth, $ternary);
 }
 
-form{background-color:rgba(255, 255, 255, 0.226);
+form{
+    background-color:rgba(255, 255, 255, 0.226);
 padding:2em;
-border-radius:2px;}
+border-radius:2px;
+}
