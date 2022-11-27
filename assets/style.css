@@ -29,7 +29,6 @@ button {
   border-radius: 1em;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
-    position:relative;
 }
 
 button:hover {
@@ -44,4 +43,9 @@ form {
   background-color: rgba(255, 255, 255, 0.226);
   padding: 2em;
   border-radius: 2px;
+}
+
+.hidden {
+  display: none;
+  position: absolute;
 }/*# sourceMappingURL=style.css.map */
