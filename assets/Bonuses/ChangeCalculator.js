@@ -33,7 +33,7 @@ function computeChange(price, moneyHanded){
 
              if ((changeDue % bankNotes[i]) == 0){
 
-                let amount = Number(changeDue / bankNotes[i]); 
+                let amount = Number(changeDue / bankNotes[i]);
                 changeGiven.push(amount);
                 changeDue -= amount * bankNotes[i];
 
@@ -72,28 +72,30 @@ function computeChange(price, moneyHanded){
         let sellerTalk = "For this, I'll give you ";
 
         let x = 0;
-        while (x < changeGiven.length){
+        
+        while(x < changeGiven.length){
             if (changeGiven[x] == 0){
-                continue;
             } else {
-                sellerTalk += ` ${changeGiven[x]} ${bankNotes[x]}`;
+                sellerTalk += ` ${changeGiven[x]} ${bankNotes[x]} `;
+              
+                if (x < 7){
+                    sellerTalk += `bills,`; 
+                } else if (x >= 7) {
+                sellerTalk += `coins,`; 
+                } else if (x = changeGiven.length) {
+                sellerTalk += ` goodbye !`;
+        
+                }
             }
 
-            if (x < 7){
-                sellerTalk += `bills,`; 
-            } else if (x > 7) {
-            sellerTalk += `coins,`; 
-          } else if (x = changeGiven.length) {
-            sellerTalk += ` goodbye !`;
-          
-    
+        console.log(sellerTalk);
+        x++; 
+
         }
-        
-        return sellerTalk;
-    }
+
+    alert(sellerTalk);
 
     }
-    alert(sellerTalk);
 }
 
 
