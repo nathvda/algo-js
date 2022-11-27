@@ -1,10 +1,16 @@
+$primary : hsl(222, 34%, 17%);
+$secondary: hsl(170, 64%, 77%);
+$ternary: hsl(224, 18%, 44%);
+$fourth: hsl(133, 44%, 51%);
+$fifth: hsl(126, 72%, 29%);
+
 html, body, h2, ol, li{
     margin:0;
     padding:0;
 }
 
 body{
-    background-color: #202020;
+    background-color: $primary;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
@@ -21,7 +27,7 @@ h2{
 button{
     appearance:none;
     background-color:transparent;
-    background-image:linear-gradient(45deg,rgba(118, 184, 146, 0.897), transparent);
+    background-image:linear-gradient(45deg,$secondary, $ternary);
     border:0;
     padding:1em 3em;
     border-radius:1em;
@@ -30,11 +36,11 @@ button{
 }
 
 button:hover{
-    background-image:linear-gradient(95deg,rgba(60, 241, 226, 0.76), transparent);
+    background-image:linear-gradient(95deg,$fourth, $ternary);
 }
 
 button:active{
-    background-image:linear-gradient(0deg,rgba(231, 248, 81, 0.76), transparent);
+    background-image:linear-gradient(180deg,$fifth, $ternary);
 }
 
 form{background-color:rgba(255, 255, 255, 0.226);
