@@ -1,57 +1,47 @@
-html, body, h2, ol, li{
-    margin:0;
-    padding:0;
+html, body, h2, ol, li {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background-color: #202020;
-    display:flex;
-    flex-direction:column;
-    justify-content:space-around;
-    align-items:center;
-    height:100vh;
+body {
+  background-color: hsl(222deg, 34%, 17%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
 }
 
-h2{
-    text-align:center;
-    font-family:verdana;
-    color:white;
+h2 {
+  text-align: center;
+  font-family: verdana;
+  color: white;
 }
 
-button{
-    appearance:none;
-    background-color:transparent;
-    background-image:linear-gradient(45deg,rgba(118, 184, 146, 0.897), transparent);
-    border:0;
-    padding:1em 3em;
-    border-radius:1em;
-    backdrop-filter:blur(5px);
-    -webkit-backdrop-filter:blur(5px);
+button {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, hsl(170deg, 64%, 77%), hsl(224deg, 18%, 44%));
+  border: 0;
+  padding: 1em 3em;
+  border-radius: 1em;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
     position:relative;
 }
 
-button:hover{
-    background-image:linear-gradient(95deg,rgba(60, 241, 226, 0.76), transparent);
+button:hover {
+  background-image: linear-gradient(95deg, hsl(133deg, 44%, 51%), hsl(224deg, 18%, 44%));
 }
 
-button:active{
-    background-image:linear-gradient(0deg,rgba(231, 248, 81, 0.76), transparent);
+button:active {
+  background-image: linear-gradient(180deg, hsl(126deg, 72%, 29%), hsl(224deg, 18%, 44%));
 }
 
-form{ background-color:rgba(255, 255, 255, 0.5);
-padding:2em;
-border-radius:1em;
-position:absolute;
-z-index:99;
-backdrop-filter:blur(4px);
--webkit-backdrop-filter:blur(4px);
-color:#303030;
-font-family:arial;
-font-size:0.8em;
-margin-top:2em;
-
-}
-
-.hidden{
-    display:none;
-}
+form {
+  background-color: rgba(255, 255, 255, 0.226);
+  padding: 2em;
+  border-radius: 2px;
+}/*# sourceMappingURL=style.css.map */
