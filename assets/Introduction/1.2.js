@@ -7,11 +7,11 @@ let Welcome = document.getElementById("WelcomeText");
 
 if (name == "" || firstName == "" || city == ""){
     Welcome.innerHTML = `Are you trying to hide something from me ? Come on, fill in the form.`;
-    Welcome.style.color = "#202020";
     Welcome.style.fontWeight = "bolder";
 } else {
 console.log(`Your name is ${firstName} ${name} and you live in ${city}`);
 
 Welcome.innerHTML = `Your name is ${firstName} ${name} and you live in ${city}`;
-    }
+
+}
 }
