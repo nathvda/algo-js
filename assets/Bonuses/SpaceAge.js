@@ -1,11 +1,15 @@
 
 function spaceAge(){
 
-let seconds = Number(prompt("enter a number of seconds"));
+let seconds = Number(document.getElementById("ageInSeconds").value);
 let toYears = seconds / 60 / 60 / 24 / 365.25;
-let chosenPlanet = prompt("choose a planet");
 
+let planeteer = document.getElementById("spaceTravel").selectedIndex;
+let destination = document.getElementsByTagName("option")[planeteer];
+let chosenPlanet = destination.value;
+let element = document.getElementById("MySpaceAge");
 
+alert(destination.value);
 
     let planets = {
         "Mercury": "0.2408467",
@@ -19,31 +23,32 @@ let chosenPlanet = prompt("choose a planet");
 
             case "Mercury": 
             alert(`You chose ${chosenPlanet}`);
-            alert(`Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`);
+            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
             break;
 
             case "Venus": 
             alert(`You chose ${chosenPlanet}`);
-            alert(`Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`);
+            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
             break;
 
             case "Earth": 
             alert(`You chose ${chosenPlanet}`);
-            alert(`Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`);
+            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
             break;
 
             case "Mars": 
             alert(`You chose ${chosenPlanet}`);
-            alert(`Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`);
+            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
             break;
 
             case "Jupiter": 
             alert(`You chose ${chosenPlanet}`);
-            alert(`Your space age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`);
+            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
             break;
 
             default:
             alert(`You didn't chose a planet... Are you from Pluton ?`);
+            break;
             
         }
 }

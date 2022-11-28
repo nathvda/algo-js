@@ -78,7 +78,10 @@ form{
     z-index:2;
     backdrop-filter:blur(8px);
     border-radius:1em;
-    top:2em;
+    top:50vh;
+    left:50vw;
+    transform:translateX(-50%);
+    width:80vw;
 }
 
 

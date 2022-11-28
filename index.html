@@ -27,7 +27,7 @@
       <option name="operand" value="mult">*</option>
       <option name="operand" value="mod">%</option>
     </select>
-    <div id="resultCal">Nothing here...</div>
+    <p id="resultCal">Nothing here...</p>
     <button type="button" onclick="calculation()">Calculer</button><button type="reset">Réinitialiser</button>
   </form>
 
@@ -72,9 +72,31 @@
 </article>
 
 <article> <h2>Bonus</h2>
-  <button onclick="spaceAge()">SpaceAge.js</button>
+  <button onclick="showBox(document.getElementById('spaceAging'))">SpaceAge.js</button>
+  <form id="spaceAging">
+    <label for="seconds">Age in seconds</label>
+    <input type="number" name="seconds" id="ageInSeconds"></input>
+    <label for="list__planets">Planet</label>
+    <select id="spaceTravel" name="destination">
+      <option name="destination" value="Mercury">Mercury</option>
+      <option name="destination" value="Venus">Venus</option>
+      <option name="destination" value="Earth">Earth</option>
+      <option name="destination" value="Mars">Mars</option>
+      <option name="destination" value="Jupiter">Jupiter</option>
+    </select>
+    <p id="MySpaceAge">Nothing here...</p>
+    <button type="button" onclick="spaceAge()">Calculer</button><button type="reset">Réinitialiser</button>
+  </form>
   <button onclick="manhattan()">Manhattan Distance</button>
-  <button onclick="moneyCall()">ChangeCalculator</button>
+  <button onclick="showBox(document.getElementById('changecalc'));">ChangeCalculator</button>
+  <form id="changecalc" class="hidden">
+    <label for="ToPay">Montant à payer</label>
+    <input type="text" name="number1" id="ToPay"></input>
+    <label for="Handed">Argent donné</label>
+    <input type="text" name="number2" id="Handed"></input>
+    <p id="MoneyGiven">Nothing here...</p>
+    <button type="button" onclick="moneyCall()">Give me my change!</button><button type="reset">Réinitialiser</button>
+  </form>
 </article>
 
 <script src="./assets/Introduction/1.0.js"></script>

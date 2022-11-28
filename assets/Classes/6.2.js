@@ -30,10 +30,11 @@ let rectangle3 = new Rectangle(8,15,20,80,"purple");
 let rectangle4 = new Rectangle(700,250,450,560,"green");
 
 
-document.write(`<div style="opacity:0.5;background-color:${rectangle.color};position:absolute;left:${rectangle.topLeftXpos}px;top:${rectangle.topLeftYpos}px;width:${rectangle.width}px;height:${rectangle.length}px;"></div>`);
-document.write(`<div style="opacity:0.5;background-color:${rectangle2.color};position:absolute;left:${rectangle2.topLeftXpos}px;top:${rectangle2.topLeftYpos}px;width:${rectangle2.width}px;height:${rectangle2.length}px;"></div>`);
-document.write(`<div style="opacity:0.5;background-color:${rectangle3.color};position:absolute;left:${rectangle3.topLeftXpos}px;top:${rectangle3.topLeftYpos}px;width:${rectangle3.width}px;height:${rectangle3.length}px;"></div>`);
-document.write(`<div style="opacity:0.5;background-color:${rectangle4.color};position:absolute;left:${rectangle4.topLeftXpos}px;top:${rectangle4.topLeftYpos}px;width:${rectangle4.width}px;height:${rectangle4.length}px;"></div>`);
+document.body.innerHTML += `<div style="opacity:0.5;background-color:${rectangle.color};position:absolute;left:${rectangle.topLeftXpos}px;top:${rectangle.topLeftYpos}px;width:${rectangle.width}px;height:${rectangle.length}px;"></div>`;
+document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle2.color};position:absolute;left:${rectangle2.topLeftXpos}px;top:${rectangle2.topLeftYpos}px;width:${rectangle2.width}px;height:${rectangle2.length}px;"></div>`;
+document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle3.color};position:absolute;left:${rectangle3.topLeftXpos}px;top:${rectangle3.topLeftYpos}px;width:${rectangle3.width}px;height:${rectangle3.length}px;"></div>`;
+document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle4.color};position:absolute;left:${rectangle4.topLeftXpos}px;top:${rectangle4.topLeftYpos}px;width:${rectangle4.width}px;height:${rectangle4.length}px;"></div>`;
+
 
 console.log(rectangle);
 console.log(rectangle2);

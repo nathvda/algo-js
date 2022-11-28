@@ -1,7 +1,7 @@
 function moneyCall(){
 
-let toPay = Number(prompt("How much do you owe me ?"));
-let money = Number(prompt("How much would you like to pay"));
+let toPay = Number(document.getElementById("ToPay").value);
+let money = Number(document.getElementById("Handed").value);
 
 function computeChange(price, moneyHanded){
 
@@ -11,7 +11,7 @@ function computeChange(price, moneyHanded){
 
     if( price > moneyHanded || price <= 0 || moneyHanded <= 0 || isNaN(price) || isNaN(moneyHanded)){
      
-        alert("Don't try to cheat.");
+        document.getElementById("MoneyGiven").innerHTML = "Don't try to cheat.";
         return changeGiven; 
 
     } else {
@@ -73,21 +73,21 @@ function computeChange(price, moneyHanded){
         console.log(changeDue);   
         console.log(changeGiven);
 
-        let sellerTalk = "For this, I'll give you ";
+        let sellerTalk = "For this, I'll give you : <br/> ";
 
         let x = 0;
         
       while(x < (changeGiven.length-1)){
             if (changeGiven[x] == 0){
             } else {
-                sellerTalk += changeGiven[x] + " " + bankNotes[x];
+                sellerTalk += changeGiven[x] + " x " + bankNotes[x];
           
                
            if (x < 7 || changeGiven[x] > 1){
-                sellerTalk += ` bills `;
+                sellerTalk += ` bills <br/> `;
 
                 } else {
-                sellerTalk += `coins`;
+                sellerTalk += `coins <br/>`;
                 }
                 
             }
@@ -97,8 +97,8 @@ function computeChange(price, moneyHanded){
 
         }
 
-    sellerTalk += `. I wish you a very good day!`;
-    alert(sellerTalk);
+    sellerTalk += `I wish you a very good day!`;
+    document.getElementById("MoneyGiven").innerHTML = sellerTalk;
     }
 }
 
