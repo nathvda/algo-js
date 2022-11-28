@@ -116,6 +116,14 @@ form {
   bottom: 0;
 }
 
+.rightcorner{
+  display: block;
+  fill: hsla(0deg, 100%, 100%, 0.3);
+  position: absolute;
+  top: 0;
+  right:0;
+  height:28em;}
+
 .colorpicker {
   position: absolute;
   width: -webkit-min-content;
