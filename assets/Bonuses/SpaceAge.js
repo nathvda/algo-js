@@ -5,11 +5,9 @@ let seconds = Number(document.getElementById("ageInSeconds").value);
 let toYears = seconds / 60 / 60 / 24 / 365.25;
 
 let planeteer = document.getElementById("spaceTravel").selectedIndex;
-let destination = document.getElementsByTagName("option")[planeteer];
+let destination = document.getElementById("spaceTravel").getElementsByTagName("option")[planeteer];
 let chosenPlanet = destination.value;
 let element = document.getElementById("MySpaceAge");
-
-alert(destination.value);
 
     let planets = {
         "Mercury": "0.2408467",
@@ -22,32 +20,37 @@ alert(destination.value);
         switch (chosenPlanet){
 
             case "Mercury": 
-            alert(`You chose ${chosenPlanet}`);
-            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            console.log(`You chose ${chosenPlanet}`);
+            element.innerHTML = `Welcome on ${chosenPlanet} ! <br> Your age here is currently ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            element.style.color = "grey";
             break;
 
             case "Venus": 
-            alert(`You chose ${chosenPlanet}`);
-            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            console.log(`You chose ${chosenPlanet}`);
+            element.innerHTML = `Welcome on ${chosenPlanet} ! <br> Your age here is currently ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            element.style.color = "green";
             break;
 
             case "Earth": 
-            alert(`You chose ${chosenPlanet}`);
-            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            console.log(`You chose ${chosenPlanet}`);
+            element.innerHTML = `Welcome on ${chosenPlanet} ! <br> Your age here is currently ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            element.style.color = "blue";
             break;
 
             case "Mars": 
-            alert(`You chose ${chosenPlanet}`);
-            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            console.log(`You chose ${chosenPlanet}`);
+            element.innerHTML = `Welcome on ${chosenPlanet} ! <br> Your age here is currently ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            element.style.color = "red";
             break;
 
             case "Jupiter": 
-            alert(`You chose ${chosenPlanet}`);
-            element.innerHTML = `Your space Age is : ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            console.log(`You chose ${chosenPlanet}`);
+            element.innerHTML = `Welcome on ${chosenPlanet} ! <br> Your age here is currently ${(Number(planets[chosenPlanet]) * toYears).toFixed(1)} years old.`;
+            element.style.color = "yellow";
             break;
 
             default:
-            alert(`You didn't chose a planet... Are you from Pluton ?`);
+            console.log(`You didn't chose a planet... Are you from Pluton ?`);
             break;
             
         }

@@ -73,7 +73,7 @@
 
 <article> <h2>Bonus</h2>
   <button onclick="showBox(document.getElementById('spaceAging'))">SpaceAge.js</button>
-  <form id="spaceAging">
+  <form id="spaceAging" class="hidden">
     <label for="seconds">Age in seconds</label>
     <input type="number" name="seconds" id="ageInSeconds"></input>
     <label for="list__planets">Planet</label>
@@ -98,6 +98,14 @@
     <button type="button" onclick="moneyCall()">Give me my change!</button><button type="reset">Réinitialiser</button>
   </form>
 </article>
+
+<div class="colorpicker">
+  <label for="hue">Hue</label>
+  <input onmouseup="colorPicker()" type="range" id="hue" name="color" min="0" max="360">
+  <label for="saturation">Saturation</label>
+  <input onmouseup="colorPicker()" type="range" id="saturation" name="color" min="0" max="100">
+  <label for="lightness">Lightness</label>
+  <input onmouseup="colorPicker()" type="range" id="light" name="color" min="0" max="100"></div>
 
 <script src="./assets/Introduction/1.0.js"></script>
 <script src="./assets/Introduction/1.1.js"></script>
