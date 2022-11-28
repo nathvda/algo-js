@@ -1,4 +1,3 @@
-
 function AmIAdult(){
     let userAge = prompt("What is your age ?");
     let coconut = document.getElementById('badge');
