@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
+<img id="badge" src="">
   <svg class="background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552.78 208.2"><path class="cls-1" d="M2.3,208.2H551.8c6.78-75.85-22.07-148.66-77.5-184C393.71-27.18,261.06,3.3,193.3,115.2c-28.65-35.97-73.89-52.62-114-42C26.97,87.06-9.76,145.55,2.3,208.2Z"/></svg>
   <button class="bulb" type="button" onclick="showBox(document.getElementById('info'));"><i class="bi bi-lightbulb-fill"></i></button><div class="information__box hidden" id="info">If nothing appears onclick, check the console. It must be why.</div>
 
@@ -32,7 +33,19 @@
   </form>
 
   <button onclick="iAmOnTV();">1.1.js</button>
-  <button onclick="whoAmI();">1.2.js</button></article>
+  <button onclick="showBox(document.getElementById('whoAmI'));">1.2.js</button>
+
+  <form id="whoAmI" class="hidden">
+    <label for="nomdefamille">Nom de famille</label>
+    <input type="text" name="nomdefamille" id="nomFamille" required></input>
+    <label for="prenom">Prénom</label>
+    <input type="text" name="prenom" id="prenom" required></input>
+    <label for="ville">Ville</label>
+    <input type="text" name="ville" id="ville" required></input>
+    <p id="WelcomeText">Nothing here...</p>
+    <button type="button" onclick="whoAmI()">Who Are You ?</button><button type="reset">Réinitialiser</button>
+  </form>
+  </article>
  
   <article>
   <h2>Control structures</h2>

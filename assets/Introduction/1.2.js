@@ -1,9 +1,17 @@
 function whoAmI(){
-let name = prompt("What is you name ?");
-let firstName = prompt("What is you first name ?"); 
-let city = prompt("Where do you come from?");
+let name = document.getElementById("nomFamille").value;
+let firstName = document.getElementById("prenom").value;
+let city = document.getElementById("ville").value;
 
-console.log("Your name is " + firstName + " " + name + " and you live in " + city);
+let Welcome = document.getElementById("WelcomeText");
 
+if (name == "" || firstName == "" || city == ""){
+    Welcome.innerHTML = `Are you trying to hide something from me ? Come on, fill in the form.`;
+    Welcome.style.color = "#202020";
+    Welcome.style.fontWeight = "bolder";
+} else {
 console.log(`Your name is ${firstName} ${name} and you live in ${city}`);
+
+Welcome.innerHTML = `Your name is ${firstName} ${name} and you live in ${city}`;
+    }
 }

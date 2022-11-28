@@ -52,7 +52,7 @@ animation:wiggle 1s alternate-reverse infinite ease-in-out;
     z-index:2;
     font-family:lato;
     width:9em;
-    font-size:12px;
+    font-size:14px;
 }
 
 article button{
@@ -79,7 +79,7 @@ form{
     padding:2em;
     border-radius:2px;
     position:absolute;
-    z-index:2;
+    z-index:101;
     backdrop-filter:blur(8px);
     border-radius:1em;
     top:50vh;
@@ -87,8 +87,6 @@ form{
     transform:translateX(-50%);
     width:80vw;
 }
-
-
 
 .hidden{
     display:none;
@@ -135,4 +133,10 @@ input[type="range"]{
     background-color:rgb(201, 201, 201);
     color:orange;
     border:none;
+}
+
+#badge{
+    width:100px; 
+    position:absolute;
+    left:0;
 }
