@@ -72,6 +72,12 @@ form {
   background-color: rgba(255, 255, 255, 0.226);
   padding: 2em;
   border-radius: 2px;
+  position: absolute;
+  z-index: 2;
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  border-radius: 1em;
+  top: 2em;
 }
 
 .hidden {
@@ -95,4 +101,10 @@ form {
   to {
     transform: rotate(-45deg);
   }
+}
+.background {
+  display: block;
+  fill: hsl(224deg, 18%, 44%);
+  position: absolute;
+  bottom: 0;
 }/*# sourceMappingURL=style.css.map */

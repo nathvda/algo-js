@@ -3,6 +3,7 @@ $secondary: hsl(170, 64%, 77%);
 $ternary: hsl(224, 18%, 44%);
 $fourth: hsl(133, 44%, 51%);
 $fifth: hsl(126, 72%, 29%);
+$white: hsl(0, 100%, 100%);
 
 html, body, h2, ol, li{
     margin:0;
@@ -73,7 +74,14 @@ form{
     background-color:rgba(255, 255, 255, 0.226);
     padding:2em;
     border-radius:2px;
+    position:absolute;
+    z-index:2;
+    backdrop-filter:blur(8px);
+    border-radius:1em;
+    top:2em;
 }
+
+
 
 .hidden{
     display:none;
@@ -86,4 +94,11 @@ form{
     to {
         transform:rotate(-45deg);
     }
+}
+
+.background{
+    display:block;
+    fill:$ternary;
+    position:absolute;
+    bottom:0;
 }
