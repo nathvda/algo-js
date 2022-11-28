@@ -1,5 +1,5 @@
 $primary : hsl(222, 34%, 17%);
-$secondary: hsl(170, 64%, 77%);
+$secondary: hsl(27, 29%, 67%);
 $ternary: hsl(224, 18%, 44%);
 $fourth: hsl(133, 44%, 51%);
 $fifth: hsl(126, 72%, 29%);
@@ -19,6 +19,9 @@ body{
     height:100vh;
     font-family:verdana;
     font-size:12px;
+    background-image:url(./SVG/Background.svg);
+    background-repeat:none;
+    background-size:cover;
 }
 
 h2{
@@ -138,5 +141,5 @@ input[type="range"]{
 #badge{
     width:100px; 
     position:absolute;
-    left:0;
+    left:2em;
 }
