@@ -5,8 +5,6 @@ let seconds = Number(prompt("enter a number of seconds"));
 let toYears = seconds / 60 / 60 / 24 / 365.25;
 let chosenPlanet = prompt("choose a planet");
 
-
-
     let planets = {
         "Mercury": "0.2408467",
         "Venus": "0.61519726",   
