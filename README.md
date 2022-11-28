@@ -11,6 +11,10 @@ This repository was started on November 24th 2022 during my training bootcamp.
 
 22-11-25 : Added button for the use of different functions. If the button doesn't do anything, try checking the console of your browser.
 
+22-11-28 : 
+- added forms to get the data needed for the execution of the scripts
+- added styles and color picker for the background
+
 # Known Issues : 
 
 For 5.2.js, the loop never ends when presented with duplicates. 

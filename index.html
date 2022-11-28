@@ -10,18 +10,17 @@
 </head>
 <body>
   <svg class="background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552.78 208.2"><path class="cls-1" d="M2.3,208.2H551.8c6.78-75.85-22.07-148.66-77.5-184C393.71-27.18,261.06,3.3,193.3,115.2c-28.65-35.97-73.89-52.62-114-42C26.97,87.06-9.76,145.55,2.3,208.2Z"/></svg>
- <svg class="rightcorner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 198.82 559.5"><path class="cls-1" d="M198.82,559.5V0C126.82,54,87.87,57.12,48.82,110-6.13,184.41-21.65,263.07,38.73,318.44c27.12,24.88,37.26,63.36,26.58,98.58-5.53,18.25-6.27,37.43-1.49,55.47,13.86,52.34,58,51.5,135,87Z"/></svg>
   <button class="bulb" type="button" onclick="showBox(document.getElementById('info'));"><i class="bi bi-lightbulb-fill"></i></button><div class="information__box hidden" id="info">If nothing appears onclick, check the console. It must be why.</div>
 
   <article><h2>Introduction</h2>
   <button onclick="showBox(document.getElementById('calculation'));">1.0.js</button>
   <form id="calculation" class="hidden">
     <label for="number1">Nombre 1</label>
-    <input type="text" name="number1" id="firstNumber"></input>
+    <input type="text" name="number1" id="firstNumber" required></input>
     <label for="number2">Nombre 2</label>
     <input type="text" name="number2" id="secondNumber"></input>
     <label for="list">Operation</label>
-    <select id="operand" name="operand">
+    <select id="operand" name="operand" required>
       <option name="operand" value="add">+</option>
       <option name="operand" value="subst">-</option>
       <option name="operand" value="div">/</option>

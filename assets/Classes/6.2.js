@@ -35,7 +35,6 @@ document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle2
 document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle3.color};position:absolute;left:${rectangle3.topLeftXpos}px;top:${rectangle3.topLeftYpos}px;width:${rectangle3.width}px;height:${rectangle3.length}px;"></div>`;
 document.body.innerHTML +=`<div style="opacity:0.5;background-color:${rectangle4.color};position:absolute;left:${rectangle4.topLeftXpos}px;top:${rectangle4.topLeftYpos}px;width:${rectangle4.width}px;height:${rectangle4.length}px;"></div>`;
 
-
 console.log(rectangle);
 console.log(rectangle2);
 

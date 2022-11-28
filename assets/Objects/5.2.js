@@ -8,11 +8,11 @@ persontv.productionYear = prompt("What is it's production year");
 let p = parseInt(prompt("How many cast members you do want to add?"));
 
 persontv.castmember = addtvcast(p);
+console.log(persontv);
 
 return persontv;
 
 }
-
 
 function addtvcast(p){
      let i = 0; 
@@ -21,10 +21,9 @@ function addtvcast(p){
    while (i < p){
         const castmember = {};
         castmember.firstname = prompt(`name of castmember ${i+1}`);
-        console.log(castmember.firstname);
         b.push(castmember);
-
-                i++;
+        console.log(castmember.firstname);
+              i++;
 
             }
             return b;
