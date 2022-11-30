@@ -9,6 +9,10 @@ This repository was started on November 24th 2022 during my training bootcamp.
 
 # Documentation
 
+22-11-30 : 
+- added localStorage to save the selected background color
+- started trying to work with third-party API
+
 22-11-28 : 
 - added forms to get the data needed for the execution of the scripts
 - added styles and color picker for the background

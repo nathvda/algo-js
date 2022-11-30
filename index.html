@@ -9,24 +9,25 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
 </head>
 <body>
-<img id="badge" src="./assets/SVG/BaseCoco.svg">
+<img id="badge" src="./assets/SVG/BaseCoco.svg" alt="a coconut badge">
   <svg class="background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552.78 208.2"><path class="cls-1" d="M2.3,208.2H551.8c6.78-75.85-22.07-148.66-77.5-184C393.71-27.18,261.06,3.3,193.3,115.2c-28.65-35.97-73.89-52.62-114-42C26.97,87.06-9.76,145.55,2.3,208.2Z"/></svg>
   <button class="bulb" type="button" onclick="showBox(document.getElementById('info'));"><i class="bi bi-lightbulb-fill"></i></button><div class="information__box hidden" id="info">If nothing appears onclick, check the console. It must be why.</div>
 
   <article><h2>Introduction</h2>
   <button onclick="showBox(document.getElementById('calculation'));">1.0.js</button>
   <form id="calculation" class="hidden">
-    <label for="number1">Nombre 1</label>
-    <input type="text" name="number1" id="firstNumber" required></input>
-    <label for="number2">Nombre 2</label>
-    <input type="text" name="number2" id="secondNumber"></input>
-    <label for="list">Operation</label>
+    <label for="firstNumber">Nombre 1</label>
+    <input type="text" name="number1" id="firstNumber" required>
+    <label for="secondNumber">Nombre 2</label>
+    <input type="text" name="number2" id="secondNumber">
+    <label for="operand">Operation</label>
     <select id="operand" name="operand" required>
-      <option name="operand" value="add">+</option>
-      <option name="operand" value="subst">-</option>
-      <option name="operand" value="div">/</option>
-      <option name="operand" value="mult">*</option>
-      <option name="operand" value="mod">%</option>
+      <option value="">Choose an operand</option>
+      <option value="add">+</option>
+      <option value="subst">-</option>
+      <option value="div">/</option>
+      <option value="mult">*</option>
+      <option value="mod">%</option>
     </select>
     <p id="resultCal">Nothing here...</p>
     <button type="button" onclick="calculation()">Calculer</button><button type="reset">Réinitialiser</button>
@@ -36,12 +37,12 @@
   <button onclick="showBox(document.getElementById('whoAmI'));">1.2.js</button>
 
   <form id="whoAmI" class="hidden">
-    <label for="nomdefamille">Nom de famille</label>
-    <input type="text" name="nomdefamille" id="nomFamille" required></input>
+    <label for="nomFamille">Nom de famille</label>
+    <input type="text" name="nomdefamille" id="nomFamille" required>
     <label for="prenom">Prénom</label>
-    <input type="text" name="prenom" id="prenom" required></input>
+    <input type="text" name="prenom" id="prenom" required>
     <label for="ville">Ville</label>
-    <input type="text" name="ville" id="ville" required></input>
+    <input type="text" name="ville" id="ville" required>
     <p id="WelcomeText">Nothing here...</p>
     <button type="button" onclick="whoAmI()">Who Are You ?</button><button type="reset">Réinitialiser</button>
   </form>
@@ -87,15 +88,15 @@
 <article> <h2>Bonus</h2>
   <button onclick="showBox(document.getElementById('spaceAging'))">SpaceAge.js</button>
   <form id="spaceAging" class="hidden">
-    <label for="seconds">Age in seconds</label>
-    <input type="number" name="seconds" id="ageInSeconds"></input>
-    <label for="list__planets">Planet</label>
+    <label for="ageInSeconds">Age in seconds</label>
+    <input type="number" name="seconds" id="ageInSeconds">
+    <label for="spaceTravel">Planet</label>
     <select id="spaceTravel" name="destination">
-      <option name="destination" value="Mercury">Mercury</option>
-      <option name="destination" value="Venus">Venus</option>
-      <option name="destination" value="Earth">Earth</option>
-      <option name="destination" value="Mars">Mars</option>
-      <option name="destination" value="Jupiter">Jupiter</option>
+      <option value="Mercury">Mercury</option>
+      <option value="Venus">Venus</option>
+      <option value="Earth">Earth</option>
+      <option value="Mars">Mars</option>
+      <option value="Jupiter">Jupiter</option>
     </select>
     <p id="MySpaceAge">Nothing here...</p>
     <button type="button" onclick="spaceAge()">Calculer</button><button type="reset">Réinitialiser</button>
@@ -104,33 +105,35 @@
   <button onclick="showBox(document.getElementById('changecalc'));">ChangeCalculator</button>
   <form id="changecalc" class="hidden">
     <label for="ToPay">Montant à payer</label>
-    <input type="text" name="number1" id="ToPay"></input>
+    <input type="text" name="number1" id="ToPay">
     <label for="Handed">Argent donné</label>
-    <input type="text" name="number2" id="Handed"></input>
+    <input type="text" name="number2" id="Handed">
     <p id="MoneyGiven">Nothing here...</p>
     <button type="button" onclick="moneyCall()">Give me my change!</button><button type="reset">Réinitialiser</button>
   </form>
 </article>
+
+<div id="HAHA"></div>
 
 <div class="colorpicker">
   <label for="hue">Hue</label>
   <input onmouseup="colorPicker()" type="range" id="hue" name="color" min="0" max="360">
   <label for="saturation">Saturation</label>
   <input onmouseup="colorPicker()" type="range" id="saturation" name="color" min="0" max="100">
-  <label for="lightness">Lightness</label>
+  <label for="light">Lightness</label>
   <input onmouseup="colorPicker()" type="range" id="light" name="color" min="0" max="100"></div>
 
 <script src="./assets/Introduction/1.0.js"></script>
 <script src="./assets/Introduction/1.1.js"></script>
 <script src="./assets//Introduction/1.2.js"></script>
 
-<script src="./assets/Control structures/2.1.js"></script>
-<script src="./assets/Control structures/2.2.js"></script> 
-<script src="./assets/Control structures/2.3.js"></script>
-<script src="./assets/Control structures/2.4.js"></script>
-<script src="./assets/Control structures/2.5.js"></script>
-<script src="./assets/Control structures/2.6.js"></script>
-<script src="./assets/Control structures/2.7.js"></script>
+<script src="./assets/Control-structures/2.1.js"></script>
+<script src="./assets/Control-structures/2.2.js"></script> 
+<script src="./assets/Control-structures/2.3.js"></script>
+<script src="./assets/Control-structures/2.4.js"></script>
+<script src="./assets/Control-structures/2.5.js"></script>
+<script src="./assets/Control-structures/2.6.js"></script>
+<script src="./assets/Control-structures/2.7.js"></script>
 
 <script src="./assets/Arrays/3.0.js"></script>
 <script src="./assets/Arrays/3.1.js"></script>

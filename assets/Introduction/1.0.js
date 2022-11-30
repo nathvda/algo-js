@@ -29,6 +29,8 @@ function calculation(){
             element.innerHTML = firstNumber % secondNumber ;
             break;
             default: 
+            console.log("You didn't choose an operand");
+            element.innerHTML = "You didn't choose an operand";
             break;
         }
 }
