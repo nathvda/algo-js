@@ -30,18 +30,49 @@ function updateColor(){
 // calls updateColor on page load
 window.addEventListener('load', updateColor());
 
-/* const request = new Request('http://acnhapi.com/v1/fish');
-const requete = new Request('http://www.lights-camera-action.org/');
+const request = 'http://acnhapi.com/v1/fish';
 
-const url = request.url;
-const method = request.method;
-const credentials = request.credentials;
-const bodyUsed = request.bodyUsed;
+const plop = document.getElementById('HAHA');
 
-console.log(requete);
+async function getACNH(animal){
+    const response = await fetch(request);
+    let myText = await response.json();
 
-fetch(request)
-.then( x => x.text())
-.then( y => document.getElementById('HAHA').innerHTML = y);
+    let boxette = document.createElement("div");
+    let fishy = document.createElement("img");
+    let shoutOut = document.createElement("p");
+    let blah = document.createTextNode(myText[`${animal}`]["catch-phrase"]);
 
-console.log(request); */
+    fishy.classList.add("potipoisson");
+    shoutOut.classList.add("talkingFish");
+
+    fishy.src = myText[`${animal}`]["icon_uri"];
+
+    boxette.appendChild(fishy);
+    shoutOut.appendChild(blah);
+    boxette.appendChild(shoutOut);
+    plop.appendChild(boxette);
+
+    localStorage.setItem(`${animal}`,"true");
+}
+
+const listOfFish = ["bitterling","anchovy","pale_chub", "carp", "goldfish", "koi", "crucian_carp"];
+
+
+function fishingGame(){
+    let randomFish = Math.floor(Math.random() * listOfFish.length);
+    console.log(randomFish);
+    getACNH(listOfFish[randomFish]);
+}
+
+
+
+/*
+.then( response => response.json())
+
+.then( (storing) => {orangejuice = storing});
+
+console.log(orangejuice);
+
+console.log(typeof orangejuice); 
+*/

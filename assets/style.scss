@@ -10,18 +10,23 @@ html, body, h2, ol, li{
     padding:0;
 }
 
+html{
+    height:100%;
+}
+
 body{
     background-color: $primary;
     display:flex;
     flex-direction:column;
     justify-content:space-around;
     align-items:center;
-    height:100vh;
     font-family:verdana;
     font-size:12px;
+    height:100%;
     background-image:url(./SVG/Background.svg);
     background-repeat:no-repeat;
     background-size:cover;
+    background-position:bottom center;
 }
 
 h2{
@@ -142,4 +147,71 @@ input[type="range"]{
     width:100px; 
     position:absolute;
     left:2em;
+}
+
+#HAHA {
+	padding: 2em;
+	z-index: 100;
+	display: grid;
+	place-items: center;
+	grid-gap: 2em;
+	grid-template-columns: repeat(4, 1fr);
+	width: 25%;
+	height: 64vh;
+	overflow-x: hidden;
+	position: absolute;
+	right: 1em;
+	bottom: 1em;
+	background-color: rgba(81, 81, 81, 0.4);
+	backdrop-filter: blur(12px);
+	border-radius: 1em;
+}
+
+#HAHA.hidden{
+	display:none;
+}
+
+#HAHA div{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+.potipoisson{
+    width:1vw;
+    background-color:white;
+    border-radius:200px;
+    padding:1em;
+}
+
+.talkingFish{
+    background-color:hsla(0, 0%, 100%, 0.671);
+    border-radius:1em;
+    padding:1em;
+    font-size:10px;
+    min-height:9em;
+}
+
+#safeLanding{
+    position:absolute;
+    top:200px;
+    left:200px;
+}
+
+#fishingGround{
+    bottom:5em;
+    left:5em;
+    position:absolute;
+    appearance:none;
+    background-color:inherit;
+    border-radius:4em;   
+
+    button{border:0;
+        padding:1em;
+        background-color:inherit;  
+        color:white;   
+        border-radius:4em;   
+
+}
 }

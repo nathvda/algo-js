@@ -10,7 +10,6 @@
 </head>
 <body>
 <img id="badge" src="./assets/SVG/BaseCoco.svg" alt="a coconut badge">
-  <svg class="background" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 552.78 208.2"><path class="cls-1" d="M2.3,208.2H551.8c6.78-75.85-22.07-148.66-77.5-184C393.71-27.18,261.06,3.3,193.3,115.2c-28.65-35.97-73.89-52.62-114-42C26.97,87.06-9.76,145.55,2.3,208.2Z"/></svg>
   <button class="bulb" type="button" onclick="showBox(document.getElementById('info'));"><i class="bi bi-lightbulb-fill"></i></button><div class="information__box hidden" id="info">If nothing appears onclick, check the console. It must be why.</div>
 
   <article><h2>Introduction</h2>
@@ -113,7 +112,11 @@
   </form>
 </article>
 
-<div id="HAHA"></div>
+<button onclick="showBox(document.getElementById('HAHA'));">Toggle fishing box</button>
+<div id="HAHA" class="hidden"></div>
+<div id="safeLanding"></div>
+<div id="fishingGround"><button type="button" onclick="fishingGame();">Give me a fish...</button></div>
+
 
 <div class="colorpicker">
   <label for="hue">Hue</label>
@@ -147,7 +150,6 @@
 <script src="./assets/Functions/4.4.js"></script>
 <script src="./assets/Functions/4.5.js"></script> 
 <script src="./assets/Functions/4.6.js"></script> 
-    
     
 <script src="./assets/Objects/5.1.js"></script>
 <script src="./assets/Objects/5.2.js"></script>
