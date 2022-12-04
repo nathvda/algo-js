@@ -65,8 +65,6 @@ function fishingGame(){
     getACNH(listOfFish[randomFish]);
 }
 
-
-
 /*
 .then( response => response.json())
 
